@@ -1,0 +1,261 @@
+1.a
+module singlebit_adder(a,b,cin,sum,carry);
+	input logic a;
+	input logic b;
+	input logic cin;
+	output sum;
+	output carry;
+
+     assign sum=(a^b^cin);
+     assign carry=(a&b)|(b&cin)|(cin&a);
+endmodule
+
+//fourbit full adder
+module adder_1a(a,b,cin,sum,carry);
+	input logic [3:0] a;
+	input logic [3:0] b;
+	input logic cin;
+  output [3:0]sum;
+	output carry;
+	
+	logic [3:0]c;
+ 
+      singlebit_adder sa1(a[0],b[0],cin ,sum[0],c[0]);
+      singlebit_adder sa2(a[1],b[1],c[0],sum[1],c[1]);
+      singlebit_adder sa3(a[2],b[2],c[1],sum[2],c[2]);
+      singlebit_adder sa4(a[3],b[3],c[2],sum[3],c[3]);
+  assign carry=c[3];
+endmodule
+
+testbench:
+module top;
+logic [3:0] a;
+logic [3:0] b;
+logic cin;
+logic [3:0] sum;
+logic carry;
+
+
+adder_1a a1(a,b,cin,sum,carry);
+
+initial 
+begin
+    for (int i=0;i<=15;i++)
+	begin
+      for (int j=0;j<=15;j++)
+		begin
+		a=i;
+		b=j;
+		cin=$random;
+		#10;
+          $display ("inputs a=%b and b=%b cin=%b output are sum =%b   cout=%b",a,b,cin,sum,carry);
+		end
+	end
+end
+
+endmodule
+
+1.b
+module adder_1b(a,b,cin,sum,carry);
+
+    input logic [3:0] a;
+	input logic [3:0] b;
+	input logic cin;
+	output [3:0] sum;
+	output carry;
+	
+	logic C0,C1,C2;
+
+Adder FA1(a[0],b[0],cin,sum[0],C0);
+Adder FA2(a[1],b[1],C0,sum[1],C1);
+Adder FA3(a[2],b[2],C1,sum[2],C2);
+Adder FA4(a[3],b[3],C2,sum[3],carry);
+endmodule
+
+module Adder(a,b,cin,sum,carry);
+    input logic a;
+	input logic b;
+	input logic cin;
+	output sum;
+	output carry;
+    logic w0,w1,w2,w3,w4;
+    
+	xor g1(w0,a,b);
+    xor g2(sum,w0,cin);
+    and g3(w1,a,b);
+    and g4(w2,b,cin);
+    and g5(w3,cin,a);
+    or g6(w4,w1,w2);
+    or g7(carry,w4,w3);
+endmodule
+
+testbench:
+module top;
+logic [3:0] a;
+logic [3:0] b;
+logic cin;
+logic [3:0] sum;
+logic carry;
+
+
+adder_1b a1(a,b,cin,sum,carry);
+
+initial 
+begin
+    for (int i=0;i<=15;i++)
+	begin
+      for (int j=0;j<=15;j++)
+		begin
+		a=i;
+		b=j;
+		cin=$random;
+		#10;
+          $display ("inputs a=%b and b=%b cin=%b output are sum =%b   cout=%b",a,b,cin,sum,carry);
+		end
+	end
+end
+
+endmodule
+
+1.c
+module adder_1c(a,b,cin,sum,carry);
+input logic [3:0] a;
+input logic [3:0] b;
+input logic cin;
+output [3:0] sum;
+output carry;
+
+wire c0,c1,c2;
+	
+  Adder A1(a[0],b[0],cin,sum[0],c0);
+  Adder A2(a[1],b[1],c0,sum[1],c1);
+  Adder A3(a[2],b[2],c1,sum[2],c2);
+  Adder A4(a[3],b[3],c2,sum[3],carry);
+	
+endmodule
+	
+
+module Adder(a,b,cin,sum,carry);
+    input logic a;
+	input logic b;
+	input logic cin;
+	output logic sum;
+	output logic carry;
+	
+always_comb 
+begin
+	case({a,b,cin})
+	
+	 3'b000: 
+		begin 
+		sum = 0; 
+		carry =0;
+		end 
+     3'b001:
+		begin 
+		sum = 1;
+		carry = 0;
+		end 
+	3'b010: 
+		begin
+		sum = 1;  
+		carry =0;
+		end
+    3'b011:
+		begin 
+		sum = 0;
+		carry = 1;
+		end
+    3'b100:
+		begin 
+		 sum = 1; 
+		 carry =0;
+		end
+     3'b101: 
+		begin 
+		 sum = 0; 
+		 carry = 1;
+		end
+     3'b110: 
+		begin 
+		 sum = 0; 
+		 carry =1;
+		end
+	3'b111:
+		begin 
+		 sum = 1; 
+		 carry = 1;
+		end
+ 	 
+	endcase
+end
+endmodule
+
+testbench:
+module top;
+logic [3:0] a;
+logic [3:0] b;
+logic cin;
+logic [3:0] sum;
+logic carry;
+
+
+adder_1c a1(a,b,cin,sum,carry);
+
+initial 
+begin
+    for (int i=0;i<=15;i++)
+	begin
+      for (int j=0;j<=15;j++)
+		begin
+		a=i;
+		b=j;
+		cin=$random;
+		#10;
+          $display ("inputs a=%b and b=%b cin=%b output are sum =%b   cout=%b",a,b,cin,sum,carry);
+		end
+	end
+end
+
+endmodules
+
+1.d
+module adder_1d (a,b,cin,sum,cout);
+input reg [3:0] a,b;
+input reg cin; 
+output reg [3:0] sum;
+output reg cout;
+
+always_comb begin
+{cout,sum}=a+b+cin;
+end
+endmodule
+
+testbench:
+module top;
+logic [3:0] a;
+logic [3:0] b;
+logic cin;
+logic [3:0] sum;
+logic carry;
+
+
+adder_1a a1(a,b,cin,sum,carry);
+
+initial 
+begin
+    for (int i=0;i<=15;i++)
+	begin
+      for (int j=0;j<=15;j++)
+		begin
+		a=i;
+		b=j;
+		cin=$random;
+		#10;
+          $display ("inputs a=%b and b=%b cin=%b output are sum =%b   cout=%b",a,b,cin,sum,carry);
+		end
+	end
+end
+
+endmodule
+

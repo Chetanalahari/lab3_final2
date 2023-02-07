@@ -1,0 +1,119 @@
+setting auto_restore_mw_cel_lib_setup true
+Initializing gui preferences from file  /u/pasam/.synopsys_dv_prefs.tcl
+dc_shell> gui_start
+4.1
+dc_shell> read_file -format sverilog {/home/pasam/common/Downloads/lab3-Chetanalahari-master/syn/rtl/adder_1a.sv}
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Loading sverilog file '/home/pasam/common/Downloads/lab3-Chetanalahari-master/syn/rtl/adder_1a.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/dw_foundation.sldb'
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: The following synthetic libraries should be added to 
+        the list of link libraries: 
+        'dw_foundation.sldb'. (UISN-26)
+Compiling source file /home/pasam/common/Downloads/lab3-Chetanalahari-master/syn/rtl/adder_1a.sv
+Presto compilation completed successfully.
+Current design is now '/home/pasam/common/Downloads/lab3-Chetanalahari-master/syn/rtl/adder_1a.db:adder_1a'
+Loaded 2 designs.
+Current design is 'adder_1a'.
+dc_shell> 
+Current design is 'adder_1a'.
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/generic.sdb'
+dc_shell> report_qor
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : qor
+Design : adder_1a
+Version: Q-2019.12-SP3
+Date   : Thu Feb  2 14:22:38 2023
+****************************************
+
+
+  Timing Path Group (none)
+  -----------------------------------
+  Levels of Logic:               2.00
+  Critical Path Length:          0.00
+  Critical Path Slack:         uninit
+  Critical Path Clk Period:       n/a
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          4
+  Hierarchical Port Count:         20
+  Leaf Cell Count:                 28
+  Buf/Inv Cell Count:               0
+  Buf Cell Count:                   0
+  Inv Cell Count:                   0
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:        28
+  Sequential Cell Count:            0
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:        0.000000
+  Noncombinational Area:     0.000000
+  Buf/Inv Area:              0.000000
+  Total Buffer Area:             0.00
+  Total Inverter Area:           0.00
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:                 0.000000
+  Design Area:               0.000000
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:            37
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: auto.ece.pdx.edu
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.00
+  Logic Optimization:                  0.00
+  Mapping Optimization:                0.00
+  -----------------------------------------
+  Overall Compile Time:                0.00
+  Overall Compile Wall Clock Time:     0.00
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
+dc_shell> exit
+
+Memory usage for this session 106 Mbytes.
+Memory usage for this session including child processes 106 Mbytes.
+CPU usage for this session 79 seconds ( 0.02 hours ).
+Elapsed time for this session 1450 seconds ( 0.40 hours ).
+
+Thank you...
+

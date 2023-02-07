@@ -1,0 +1,263 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -derate
+        -input_pins
+        -nets
+        -slack_lesser_than 0.0000
+        -max_paths 10000
+        -transition_time
+        -crosstalk_delta
+        -capacitance
+Design : adder_1b
+Version: Q-2019.12-SP3
+Date   : Thu Feb  2 19:49:24 2023
+****************************************
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: a[0] (input port)
+  Endpoint: sum[3] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adder_1b           ForQA                 saed32rvt_ss0p95v125c
+
+  Point                        Fanout       Cap     DTran     Trans     Delta     Derate      Incr       Path
+  --------------------------------------------------------------------------------------------------------------
+  input external delay                                                                      0.0000     0.0000 r
+  a[0] (in)                                                  0.0000                         0.0000     0.0000 r
+  a[0] (net)                     2       3.7670                                             0.0000     0.0000 r
+  FA1/a (Adder_3)                                                                           0.0000     0.0000 r
+  FA1/a (net)                            3.7670                                             0.0000     0.0000 r
+  FA1/U1/A (FADDX1_RVT)                            0.0000    0.0000    0.0000               0.0000     0.0000 r
+  FA1/U1/CO (FADDX1_RVT)                                     0.0477                         0.0948     0.0948 r
+  FA1/carry (net)                2       1.6507                                             0.0000     0.0948 r
+  FA1/carry (Adder_3)                                                                       0.0000     0.0948 r
+  C0 (net)                               1.6507                                             0.0000     0.0948 r
+  FA2/cin (Adder_2)                                                                         0.0000     0.0948 r
+  FA2/cin (net)                          1.6507                                             0.0000     0.0948 r
+  FA2/U3/A4 (OA22X1_RVT)                           0.0000    0.0477    0.0000               0.0000     0.0948 r
+  FA2/U3/Y (OA22X1_RVT)                                      0.0390                         0.0760     0.1708 r
+  FA2/carry (net)                2       1.6507                                             0.0000     0.1708 r
+  FA2/carry (Adder_2)                                                                       0.0000     0.1708 r
+  C1 (net)                               1.6507                                             0.0000     0.1708 r
+  FA3/cin (Adder_1)                                                                         0.0000     0.1708 r
+  FA3/cin (net)                          1.6507                                             0.0000     0.1708 r
+  FA3/U4/A4 (OA22X1_RVT)                           0.0000    0.0390    0.0000               0.0000     0.1708 r
+  FA3/U4/Y (OA22X1_RVT)                                      0.0458                         0.0796     0.2505 r
+  FA3/carry (net)                2       2.5019                                             0.0000     0.2505 r
+  FA3/carry (Adder_1)                                                                       0.0000     0.2505 r
+  C2 (net)                               2.5019                                             0.0000     0.2505 r
+  FA4/cin (Adder_0)                                                                         0.0000     0.2505 r
+  FA4/cin (net)                          2.5019                                             0.0000     0.2505 r
+  FA4/U1/A3 (XOR3X1_RVT)                           0.0000    0.0458    0.0000               0.0000     0.2505 r
+  FA4/U1/Y (XOR3X1_RVT)                                      0.0399                         0.0635     0.3140 f
+  FA4/sum (net)                  1       0.2433                                             0.0000     0.3140 f
+  FA4/sum (Adder_0)                                                                         0.0000     0.3140 f
+  sum[3] (net)                           0.2433                                             0.0000     0.3140 f
+  sum[3] (out)                                     0.0000    0.0399    0.0000               0.0000     0.3140 f
+  data arrival time                                                                                    0.3140
+
+  max_delay                                                                                 0.0000     0.0000
+  output external delay                                                                     0.0000     0.0000
+  data required time                                                                                   0.0000
+  --------------------------------------------------------------------------------------------------------------
+  data required time                                                                                   0.0000
+  data arrival time                                                                                   -0.3140
+  --------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -0.3140
+
+
+  Startpoint: a[0] (input port)
+  Endpoint: carry (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adder_1b           ForQA                 saed32rvt_ss0p95v125c
+
+  Point                        Fanout       Cap     DTran     Trans     Delta     Derate      Incr       Path
+  --------------------------------------------------------------------------------------------------------------
+  input external delay                                                                      0.0000     0.0000 r
+  a[0] (in)                                                  0.0000                         0.0000     0.0000 r
+  a[0] (net)                     2       3.7670                                             0.0000     0.0000 r
+  FA1/a (Adder_3)                                                                           0.0000     0.0000 r
+  FA1/a (net)                            3.7670                                             0.0000     0.0000 r
+  FA1/U1/A (FADDX1_RVT)                            0.0000    0.0000    0.0000               0.0000     0.0000 r
+  FA1/U1/CO (FADDX1_RVT)                                     0.0477                         0.0948     0.0948 r
+  FA1/carry (net)                2       1.6507                                             0.0000     0.0948 r
+  FA1/carry (Adder_3)                                                                       0.0000     0.0948 r
+  C0 (net)                               1.6507                                             0.0000     0.0948 r
+  FA2/cin (Adder_2)                                                                         0.0000     0.0948 r
+  FA2/cin (net)                          1.6507                                             0.0000     0.0948 r
+  FA2/U3/A4 (OA22X1_RVT)                           0.0000    0.0477    0.0000               0.0000     0.0948 r
+  FA2/U3/Y (OA22X1_RVT)                                      0.0390                         0.0760     0.1708 r
+  FA2/carry (net)                2       1.6507                                             0.0000     0.1708 r
+  FA2/carry (Adder_2)                                                                       0.0000     0.1708 r
+  C1 (net)                               1.6507                                             0.0000     0.1708 r
+  FA3/cin (Adder_1)                                                                         0.0000     0.1708 r
+  FA3/cin (net)                          1.6507                                             0.0000     0.1708 r
+  FA3/U4/A4 (OA22X1_RVT)                           0.0000    0.0390    0.0000               0.0000     0.1708 r
+  FA3/U4/Y (OA22X1_RVT)                                      0.0458                         0.0796     0.2505 r
+  FA3/carry (net)                2       2.5019                                             0.0000     0.2505 r
+  FA3/carry (Adder_1)                                                                       0.0000     0.2505 r
+  C2 (net)                               2.5019                                             0.0000     0.2505 r
+  FA4/cin (Adder_0)                                                                         0.0000     0.2505 r
+  FA4/cin (net)                          2.5019                                             0.0000     0.2505 r
+  FA4/U3/A3 (AO22X1_RVT)                           0.0000    0.0458    0.0000               0.0000     0.2505 r
+  FA4/U3/Y (AO22X1_RVT)                                      0.0284                         0.0622     0.3127 r
+  FA4/carry (net)                1       0.2433                                             0.0000     0.3127 r
+  FA4/carry (Adder_0)                                                                       0.0000     0.3127 r
+  carry (net)                            0.2433                                             0.0000     0.3127 r
+  carry (out)                                      0.0000    0.0284    0.0000               0.0000     0.3127 r
+  data arrival time                                                                                    0.3127
+
+  max_delay                                                                                 0.0000     0.0000
+  output external delay                                                                     0.0000     0.0000
+  data required time                                                                                   0.0000
+  --------------------------------------------------------------------------------------------------------------
+  data required time                                                                                   0.0000
+  data arrival time                                                                                   -0.3127
+  --------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -0.3127
+
+
+  Startpoint: a[0] (input port)
+  Endpoint: sum[2] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adder_1b           ForQA                 saed32rvt_ss0p95v125c
+  Adder_1            ForQA                 saed32rvt_ss0p95v125c
+
+  Point                        Fanout       Cap     DTran     Trans     Delta     Derate      Incr       Path
+  --------------------------------------------------------------------------------------------------------------
+  input external delay                                                                      0.0000     0.0000 r
+  a[0] (in)                                                  0.0000                         0.0000     0.0000 r
+  a[0] (net)                     2       3.7670                                             0.0000     0.0000 r
+  FA1/a (Adder_3)                                                                           0.0000     0.0000 r
+  FA1/a (net)                            3.7670                                             0.0000     0.0000 r
+  FA1/U1/A (FADDX1_RVT)                            0.0000    0.0000    0.0000               0.0000     0.0000 r
+  FA1/U1/CO (FADDX1_RVT)                                     0.0477                         0.0948     0.0948 r
+  FA1/carry (net)                2       1.6507                                             0.0000     0.0948 r
+  FA1/carry (Adder_3)                                                                       0.0000     0.0948 r
+  C0 (net)                               1.6507                                             0.0000     0.0948 r
+  FA2/cin (Adder_2)                                                                         0.0000     0.0948 r
+  FA2/cin (net)                          1.6507                                             0.0000     0.0948 r
+  FA2/U3/A4 (OA22X1_RVT)                           0.0000    0.0477    0.0000               0.0000     0.0948 r
+  FA2/U3/Y (OA22X1_RVT)                                      0.0390                         0.0760     0.1708 r
+  FA2/carry (net)                2       1.6507                                             0.0000     0.1708 r
+  FA2/carry (Adder_2)                                                                       0.0000     0.1708 r
+  C1 (net)                               1.6507                                             0.0000     0.1708 r
+  FA3/cin (Adder_1)                                                                         0.0000     0.1708 r
+  FA3/cin (net)                          1.6507                                             0.0000     0.1708 r
+  FA3/U2/A (NBUFFX2_RVT)                           0.0000    0.0390    0.0000               0.0000     0.1708 r
+  FA3/U2/Y (NBUFFX2_RVT)                                     0.0253                         0.0513     0.2221 r
+  FA3/n2 (net)                   1       1.6471                                             0.0000     0.2221 r
+  FA3/U1/A3 (XOR3X1_RVT)                           0.0000    0.0253    0.0000               0.0000     0.2221 r
+  FA3/U1/Y (XOR3X1_RVT)                                      0.0399                         0.0567     0.2789 f
+  FA3/sum (net)                  1       0.2433                                             0.0000     0.2789 f
+  FA3/sum (Adder_1)                                                                         0.0000     0.2789 f
+  sum[2] (net)                           0.2433                                             0.0000     0.2789 f
+  sum[2] (out)                                     0.0000    0.0399    0.0000               0.0000     0.2789 f
+  data arrival time                                                                                    0.2789
+
+  max_delay                                                                                 0.0000     0.0000
+  output external delay                                                                     0.0000     0.0000
+  data required time                                                                                   0.0000
+  --------------------------------------------------------------------------------------------------------------
+  data required time                                                                                   0.0000
+  data arrival time                                                                                   -0.2789
+  --------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -0.2789
+
+
+  Startpoint: a[0] (input port)
+  Endpoint: sum[1] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adder_1b           ForQA                 saed32rvt_ss0p95v125c
+  Adder_2            ForQA                 saed32rvt_ss0p95v125c
+
+  Point                        Fanout       Cap     DTran     Trans     Delta     Derate      Incr       Path
+  --------------------------------------------------------------------------------------------------------------
+  input external delay                                                                      0.0000     0.0000 r
+  a[0] (in)                                                  0.0000                         0.0000     0.0000 r
+  a[0] (net)                     2       3.7670                                             0.0000     0.0000 r
+  FA1/a (Adder_3)                                                                           0.0000     0.0000 r
+  FA1/a (net)                            3.7670                                             0.0000     0.0000 r
+  FA1/U1/A (FADDX1_RVT)                            0.0000    0.0000    0.0000               0.0000     0.0000 r
+  FA1/U1/CO (FADDX1_RVT)                                     0.0477                         0.0948     0.0948 r
+  FA1/carry (net)                2       1.6507                                             0.0000     0.0948 r
+  FA1/carry (Adder_3)                                                                       0.0000     0.0948 r
+  C0 (net)                               1.6507                                             0.0000     0.0948 r
+  FA2/cin (Adder_2)                                                                         0.0000     0.0948 r
+  FA2/cin (net)                          1.6507                                             0.0000     0.0948 r
+  FA2/U4/A (NBUFFX2_RVT)                           0.0000    0.0477    0.0000               0.0000     0.0948 r
+  FA2/U4/Y (NBUFFX2_RVT)                                     0.0264                         0.0539     0.1487 r
+  FA2/n2 (net)                   1       1.6471                                             0.0000     0.1487 r
+  FA2/U1/A3 (XOR3X1_RVT)                           0.0000    0.0264    0.0000               0.0000     0.1487 r
+  FA2/U1/Y (XOR3X1_RVT)                                      0.0399                         0.0572     0.2058 f
+  FA2/sum (net)                  1       0.2433                                             0.0000     0.2058 f
+  FA2/sum (Adder_2)                                                                         0.0000     0.2058 f
+  sum[1] (net)                           0.2433                                             0.0000     0.2058 f
+  sum[1] (out)                                     0.0000    0.0399    0.0000               0.0000     0.2058 f
+  data arrival time                                                                                    0.2058
+
+  max_delay                                                                                 0.0000     0.0000
+  output external delay                                                                     0.0000     0.0000
+  data required time                                                                                   0.0000
+  --------------------------------------------------------------------------------------------------------------
+  data required time                                                                                   0.0000
+  data arrival time                                                                                   -0.2058
+  --------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -0.2058
+
+
+  Startpoint: a[0] (input port)
+  Endpoint: sum[0] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adder_1b           ForQA                 saed32rvt_ss0p95v125c
+
+  Point                        Fanout       Cap     DTran     Trans     Delta     Derate      Incr       Path
+  --------------------------------------------------------------------------------------------------------------
+  input external delay                                                                      0.0000     0.0000 f
+  a[0] (in)                                                  0.0000                         0.0000     0.0000 f
+  a[0] (net)                     2       3.7280                                             0.0000     0.0000 f
+  FA1/a (Adder_3)                                                                           0.0000     0.0000 f
+  FA1/a (net)                            3.7280                                             0.0000     0.0000 f
+  FA1/U2/A2 (XOR3X2_RVT)                           0.0000    0.0000    0.0000               0.0000     0.0000 f
+  FA1/U2/Y (XOR3X2_RVT)                                      0.0431                         0.1420     0.1420 f
+  FA1/sum (net)                  1       0.2433                                             0.0000     0.1420 f
+  FA1/sum (Adder_3)                                                                         0.0000     0.1420 f
+  sum[0] (net)                           0.2433                                             0.0000     0.1420 f
+  sum[0] (out)                                     0.0000    0.0431    0.0000               0.0000     0.1420 f
+  data arrival time                                                                                    0.1420
+
+  max_delay                                                                                 0.0000     0.0000
+  output external delay                                                                     0.0000     0.0000
+  data required time                                                                                   0.0000
+  --------------------------------------------------------------------------------------------------------------
+  data required time                                                                                   0.0000
+  data arrival time                                                                                   -0.1420
+  --------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -0.1420
+
+
+1

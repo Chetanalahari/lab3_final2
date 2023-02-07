@@ -1,0 +1,34 @@
+ guiWinConfig .a.pane.f3.command.text.text.promt1 103 19 1 -11 
+ guiWinConfig .a.pane.f3.command.text.text.promt2 103 19 1 8 
+tixPanedWindow:HighlightBtn .a.pane 2
+tixPanedWindow:DeHighlightBtn .a.pane 2
+         if { [ .icon.rrcmgr cget -state ] == "normal" } {
+            .icon.rrcmgr configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.rrcmgr
+ .icon.rrcmgr configure -relief flat 
+     tk::ButtonLeave .icon.rrcmgr
+         if { [ .icon.diag cget -state ] == "normal" } {
+            .icon.diag configure -relief groove
+        }
+    
+     tk::ButtonEnter .icon.diag
+ guiWinConfig .b.frame.lab 276 22 1 1 
+ .icon.diag configure -relief flat 
+     tk::ButtonLeave .icon.diag
+     tk::MbEnter .v_menu.opt
+     tk::MbMotion .v_menu.opt up 600 82
+ guiWinConfig .b.frame.lab 4 22 1 1 
+     tk::MbMotion .v_menu.opt up 613 74
+     tk::MbMotion .v_menu.opt up 627 63
+     tk::MbLeave .v_menu.opt
+     tk::ButtonEnter .icon.setup
+     tk::ButtonLeave .icon.setup
+         if { [ .v_menu.logo cget -state ] == "normal" } {
+            .v_menu.logo configure -relief groove
+        }
+    
+     tk::ButtonEnter .v_menu.logo
+ .v_menu.logo configure -relief flat 
+     tk::ButtonLeave .v_menu.logo

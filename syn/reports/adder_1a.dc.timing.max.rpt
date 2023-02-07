@@ -1,0 +1,263 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -derate
+        -input_pins
+        -nets
+        -slack_lesser_than 0.0000
+        -max_paths 10000
+        -transition_time
+        -crosstalk_delta
+        -capacitance
+Design : adder_1a
+Version: Q-2019.12-SP3
+Date   : Thu Feb  2 14:34:21 2023
+****************************************
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: a[0] (input port)
+  Endpoint: sum[3] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adder_1a           ForQA                 saed32rvt_ss0p95v125c
+
+  Point                        Fanout       Cap     DTran     Trans     Delta     Derate      Incr       Path
+  --------------------------------------------------------------------------------------------------------------
+  input external delay                                                                      0.0000     0.0000 r
+  a[0] (in)                                                  0.0000                         0.0000     0.0000 r
+  a[0] (net)                     2       3.7670                                             0.0000     0.0000 r
+  sa1/a (singlebit_adder_3)                                                                 0.0000     0.0000 r
+  sa1/a (net)                            3.7670                                             0.0000     0.0000 r
+  sa1/U1/A (FADDX1_RVT)                            0.0000    0.0000    0.0000               0.0000     0.0000 r
+  sa1/U1/CO (FADDX1_RVT)                                     0.0477                         0.0948     0.0948 r
+  sa1/carry (net)                2       1.6507                                             0.0000     0.0948 r
+  sa1/carry (singlebit_adder_3)                                                             0.0000     0.0948 r
+  c[0] (net)                             1.6507                                             0.0000     0.0948 r
+  sa2/cin (singlebit_adder_2)                                                               0.0000     0.0948 r
+  sa2/cin (net)                          1.6507                                             0.0000     0.0948 r
+  sa2/U3/A4 (OA22X1_RVT)                           0.0000    0.0477    0.0000               0.0000     0.0948 r
+  sa2/U3/Y (OA22X1_RVT)                                      0.0390                         0.0760     0.1708 r
+  sa2/carry (net)                2       1.6507                                             0.0000     0.1708 r
+  sa2/carry (singlebit_adder_2)                                                             0.0000     0.1708 r
+  c[1] (net)                             1.6507                                             0.0000     0.1708 r
+  sa3/cin (singlebit_adder_1)                                                               0.0000     0.1708 r
+  sa3/cin (net)                          1.6507                                             0.0000     0.1708 r
+  sa3/U4/A4 (OA22X1_RVT)                           0.0000    0.0390    0.0000               0.0000     0.1708 r
+  sa3/U4/Y (OA22X1_RVT)                                      0.0458                         0.0796     0.2505 r
+  sa3/carry (net)                2       2.5019                                             0.0000     0.2505 r
+  sa3/carry (singlebit_adder_1)                                                             0.0000     0.2505 r
+  c[2] (net)                             2.5019                                             0.0000     0.2505 r
+  sa4/cin (singlebit_adder_0)                                                               0.0000     0.2505 r
+  sa4/cin (net)                          2.5019                                             0.0000     0.2505 r
+  sa4/U1/A3 (XOR3X1_RVT)                           0.0000    0.0458    0.0000               0.0000     0.2505 r
+  sa4/U1/Y (XOR3X1_RVT)                                      0.0399                         0.0635     0.3140 f
+  sa4/sum (net)                  1       0.2433                                             0.0000     0.3140 f
+  sa4/sum (singlebit_adder_0)                                                               0.0000     0.3140 f
+  sum[3] (net)                           0.2433                                             0.0000     0.3140 f
+  sum[3] (out)                                     0.0000    0.0399    0.0000               0.0000     0.3140 f
+  data arrival time                                                                                    0.3140
+
+  max_delay                                                                                 0.0000     0.0000
+  output external delay                                                                     0.0000     0.0000
+  data required time                                                                                   0.0000
+  --------------------------------------------------------------------------------------------------------------
+  data required time                                                                                   0.0000
+  data arrival time                                                                                   -0.3140
+  --------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -0.3140
+
+
+  Startpoint: a[0] (input port)
+  Endpoint: carry (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adder_1a           ForQA                 saed32rvt_ss0p95v125c
+
+  Point                        Fanout       Cap     DTran     Trans     Delta     Derate      Incr       Path
+  --------------------------------------------------------------------------------------------------------------
+  input external delay                                                                      0.0000     0.0000 r
+  a[0] (in)                                                  0.0000                         0.0000     0.0000 r
+  a[0] (net)                     2       3.7670                                             0.0000     0.0000 r
+  sa1/a (singlebit_adder_3)                                                                 0.0000     0.0000 r
+  sa1/a (net)                            3.7670                                             0.0000     0.0000 r
+  sa1/U1/A (FADDX1_RVT)                            0.0000    0.0000    0.0000               0.0000     0.0000 r
+  sa1/U1/CO (FADDX1_RVT)                                     0.0477                         0.0948     0.0948 r
+  sa1/carry (net)                2       1.6507                                             0.0000     0.0948 r
+  sa1/carry (singlebit_adder_3)                                                             0.0000     0.0948 r
+  c[0] (net)                             1.6507                                             0.0000     0.0948 r
+  sa2/cin (singlebit_adder_2)                                                               0.0000     0.0948 r
+  sa2/cin (net)                          1.6507                                             0.0000     0.0948 r
+  sa2/U3/A4 (OA22X1_RVT)                           0.0000    0.0477    0.0000               0.0000     0.0948 r
+  sa2/U3/Y (OA22X1_RVT)                                      0.0390                         0.0760     0.1708 r
+  sa2/carry (net)                2       1.6507                                             0.0000     0.1708 r
+  sa2/carry (singlebit_adder_2)                                                             0.0000     0.1708 r
+  c[1] (net)                             1.6507                                             0.0000     0.1708 r
+  sa3/cin (singlebit_adder_1)                                                               0.0000     0.1708 r
+  sa3/cin (net)                          1.6507                                             0.0000     0.1708 r
+  sa3/U4/A4 (OA22X1_RVT)                           0.0000    0.0390    0.0000               0.0000     0.1708 r
+  sa3/U4/Y (OA22X1_RVT)                                      0.0458                         0.0796     0.2505 r
+  sa3/carry (net)                2       2.5019                                             0.0000     0.2505 r
+  sa3/carry (singlebit_adder_1)                                                             0.0000     0.2505 r
+  c[2] (net)                             2.5019                                             0.0000     0.2505 r
+  sa4/cin (singlebit_adder_0)                                                               0.0000     0.2505 r
+  sa4/cin (net)                          2.5019                                             0.0000     0.2505 r
+  sa4/U3/A3 (AO22X1_RVT)                           0.0000    0.0458    0.0000               0.0000     0.2505 r
+  sa4/U3/Y (AO22X1_RVT)                                      0.0284                         0.0622     0.3127 r
+  sa4/carry (net)                1       0.2433                                             0.0000     0.3127 r
+  sa4/carry (singlebit_adder_0)                                                             0.0000     0.3127 r
+  carry (net)                            0.2433                                             0.0000     0.3127 r
+  carry (out)                                      0.0000    0.0284    0.0000               0.0000     0.3127 r
+  data arrival time                                                                                    0.3127
+
+  max_delay                                                                                 0.0000     0.0000
+  output external delay                                                                     0.0000     0.0000
+  data required time                                                                                   0.0000
+  --------------------------------------------------------------------------------------------------------------
+  data required time                                                                                   0.0000
+  data arrival time                                                                                   -0.3127
+  --------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -0.3127
+
+
+  Startpoint: a[0] (input port)
+  Endpoint: sum[2] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adder_1a           ForQA                 saed32rvt_ss0p95v125c
+  singlebit_adder_1  ForQA                 saed32rvt_ss0p95v125c
+
+  Point                        Fanout       Cap     DTran     Trans     Delta     Derate      Incr       Path
+  --------------------------------------------------------------------------------------------------------------
+  input external delay                                                                      0.0000     0.0000 r
+  a[0] (in)                                                  0.0000                         0.0000     0.0000 r
+  a[0] (net)                     2       3.7670                                             0.0000     0.0000 r
+  sa1/a (singlebit_adder_3)                                                                 0.0000     0.0000 r
+  sa1/a (net)                            3.7670                                             0.0000     0.0000 r
+  sa1/U1/A (FADDX1_RVT)                            0.0000    0.0000    0.0000               0.0000     0.0000 r
+  sa1/U1/CO (FADDX1_RVT)                                     0.0477                         0.0948     0.0948 r
+  sa1/carry (net)                2       1.6507                                             0.0000     0.0948 r
+  sa1/carry (singlebit_adder_3)                                                             0.0000     0.0948 r
+  c[0] (net)                             1.6507                                             0.0000     0.0948 r
+  sa2/cin (singlebit_adder_2)                                                               0.0000     0.0948 r
+  sa2/cin (net)                          1.6507                                             0.0000     0.0948 r
+  sa2/U3/A4 (OA22X1_RVT)                           0.0000    0.0477    0.0000               0.0000     0.0948 r
+  sa2/U3/Y (OA22X1_RVT)                                      0.0390                         0.0760     0.1708 r
+  sa2/carry (net)                2       1.6507                                             0.0000     0.1708 r
+  sa2/carry (singlebit_adder_2)                                                             0.0000     0.1708 r
+  c[1] (net)                             1.6507                                             0.0000     0.1708 r
+  sa3/cin (singlebit_adder_1)                                                               0.0000     0.1708 r
+  sa3/cin (net)                          1.6507                                             0.0000     0.1708 r
+  sa3/U2/A (NBUFFX2_RVT)                           0.0000    0.0390    0.0000               0.0000     0.1708 r
+  sa3/U2/Y (NBUFFX2_RVT)                                     0.0253                         0.0513     0.2221 r
+  sa3/n2 (net)                   1       1.6471                                             0.0000     0.2221 r
+  sa3/U1/A3 (XOR3X1_RVT)                           0.0000    0.0253    0.0000               0.0000     0.2221 r
+  sa3/U1/Y (XOR3X1_RVT)                                      0.0399                         0.0567     0.2789 f
+  sa3/sum (net)                  1       0.2433                                             0.0000     0.2789 f
+  sa3/sum (singlebit_adder_1)                                                               0.0000     0.2789 f
+  sum[2] (net)                           0.2433                                             0.0000     0.2789 f
+  sum[2] (out)                                     0.0000    0.0399    0.0000               0.0000     0.2789 f
+  data arrival time                                                                                    0.2789
+
+  max_delay                                                                                 0.0000     0.0000
+  output external delay                                                                     0.0000     0.0000
+  data required time                                                                                   0.0000
+  --------------------------------------------------------------------------------------------------------------
+  data required time                                                                                   0.0000
+  data arrival time                                                                                   -0.2789
+  --------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -0.2789
+
+
+  Startpoint: a[0] (input port)
+  Endpoint: sum[1] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adder_1a           ForQA                 saed32rvt_ss0p95v125c
+  singlebit_adder_2  ForQA                 saed32rvt_ss0p95v125c
+
+  Point                        Fanout       Cap     DTran     Trans     Delta     Derate      Incr       Path
+  --------------------------------------------------------------------------------------------------------------
+  input external delay                                                                      0.0000     0.0000 r
+  a[0] (in)                                                  0.0000                         0.0000     0.0000 r
+  a[0] (net)                     2       3.7670                                             0.0000     0.0000 r
+  sa1/a (singlebit_adder_3)                                                                 0.0000     0.0000 r
+  sa1/a (net)                            3.7670                                             0.0000     0.0000 r
+  sa1/U1/A (FADDX1_RVT)                            0.0000    0.0000    0.0000               0.0000     0.0000 r
+  sa1/U1/CO (FADDX1_RVT)                                     0.0477                         0.0948     0.0948 r
+  sa1/carry (net)                2       1.6507                                             0.0000     0.0948 r
+  sa1/carry (singlebit_adder_3)                                                             0.0000     0.0948 r
+  c[0] (net)                             1.6507                                             0.0000     0.0948 r
+  sa2/cin (singlebit_adder_2)                                                               0.0000     0.0948 r
+  sa2/cin (net)                          1.6507                                             0.0000     0.0948 r
+  sa2/U4/A (NBUFFX2_RVT)                           0.0000    0.0477    0.0000               0.0000     0.0948 r
+  sa2/U4/Y (NBUFFX2_RVT)                                     0.0264                         0.0539     0.1487 r
+  sa2/n2 (net)                   1       1.6471                                             0.0000     0.1487 r
+  sa2/U1/A3 (XOR3X1_RVT)                           0.0000    0.0264    0.0000               0.0000     0.1487 r
+  sa2/U1/Y (XOR3X1_RVT)                                      0.0399                         0.0572     0.2058 f
+  sa2/sum (net)                  1       0.2433                                             0.0000     0.2058 f
+  sa2/sum (singlebit_adder_2)                                                               0.0000     0.2058 f
+  sum[1] (net)                           0.2433                                             0.0000     0.2058 f
+  sum[1] (out)                                     0.0000    0.0399    0.0000               0.0000     0.2058 f
+  data arrival time                                                                                    0.2058
+
+  max_delay                                                                                 0.0000     0.0000
+  output external delay                                                                     0.0000     0.0000
+  data required time                                                                                   0.0000
+  --------------------------------------------------------------------------------------------------------------
+  data required time                                                                                   0.0000
+  data arrival time                                                                                   -0.2058
+  --------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -0.2058
+
+
+  Startpoint: a[0] (input port)
+  Endpoint: sum[0] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adder_1a           ForQA                 saed32rvt_ss0p95v125c
+
+  Point                        Fanout       Cap     DTran     Trans     Delta     Derate      Incr       Path
+  --------------------------------------------------------------------------------------------------------------
+  input external delay                                                                      0.0000     0.0000 f
+  a[0] (in)                                                  0.0000                         0.0000     0.0000 f
+  a[0] (net)                     2       3.7280                                             0.0000     0.0000 f
+  sa1/a (singlebit_adder_3)                                                                 0.0000     0.0000 f
+  sa1/a (net)                            3.7280                                             0.0000     0.0000 f
+  sa1/U2/A2 (XOR3X2_RVT)                           0.0000    0.0000    0.0000               0.0000     0.0000 f
+  sa1/U2/Y (XOR3X2_RVT)                                      0.0431                         0.1420     0.1420 f
+  sa1/sum (net)                  1       0.2433                                             0.0000     0.1420 f
+  sa1/sum (singlebit_adder_3)                                                               0.0000     0.1420 f
+  sum[0] (net)                           0.2433                                             0.0000     0.1420 f
+  sum[0] (out)                                     0.0000    0.0431    0.0000               0.0000     0.1420 f
+  data arrival time                                                                                    0.1420
+
+  max_delay                                                                                 0.0000     0.0000
+  output external delay                                                                     0.0000     0.0000
+  data required time                                                                                   0.0000
+  --------------------------------------------------------------------------------------------------------------
+  data required time                                                                                   0.0000
+  data arrival time                                                                                   -0.1420
+  --------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -0.1420
+
+
+1

@@ -1,0 +1,29 @@
+setting auto_restore_mw_cel_lib_setup true
+Initializing gui preferences from file  /u/pasam/.synopsys_dv_prefs.tcl
+dc_shell> set top_design adder_1d
+adder_1d
+dc_shell> source ../scripts/dc-adder_1d.tcl
+== ANALYZE autoread all files ==
+
+Starting ANALYZE autoread mode...
+Warning: Defining design library 'WORK' at directory '/home/pasam/common/Downloads/lab3-Chetanalahari-master/syn/work/WORK_autoread'. (AUTOREAD-107)
+Information: Adding '/home/pasam/common/Downloads/lab3-Chetanalahari-master/syn/rtl/adder_1d.sv'.  (AUTOREAD-100)
+Information: Scanning file { adder_1d.sv }. (AUTOREAD-303)
+Compiling source file /home/pasam/common/Downloads/lab3-Chetanalahari-master/syn/rtl/adder_1d.sv
+Presto compilation completed successfully.
+Autoread command completed successfully.
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/dw_foundation.sldb'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'saed32rvt_ss0p95v125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (adder_1d)
+Elaborated 1 design.
+Current design is now 'adder_1d'.
+set_max_delay -from [all_inputs ] -to [all_outputs] 0
+1
+Current design is 'adder_1d'.
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db"

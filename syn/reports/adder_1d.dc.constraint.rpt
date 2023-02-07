@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : adder_1d
+Version: Q-2019.12-SP3
+Date   : Thu Feb  2 14:42:56 2023
+****************************************
+
+
+   max_delay/setup ('default' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   sum[3]                       0.00           0.28 r        -0.28  (VIOLATED)
+   cout                         0.00           0.28 f        -0.28  (VIOLATED)
+   sum[2]                       0.00           0.27 f        -0.27  (VIOLATED)
+   sum[1]                       0.00           0.23 r        -0.23  (VIOLATED)
+   sum[0]                       0.00           0.19 f        -0.19  (VIOLATED)
+
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   adder_1d                     0.00       5726620.50     -5726620.50
+                                                                    (VIOLATED)
+
+
+1

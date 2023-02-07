@@ -1,0 +1,34 @@
+setting auto_restore_mw_cel_lib_setup true
+Initializing gui preferences from file  /u/pasam/.synopsys_dv_prefs.tcl
+dc_shell> gui_start
+4.1
+dc_shell> read_file -format sverilog {/home/pasam/common/Downloads/lab3-Chetanalahari-master/syn/rtl/adder_1b.sv}
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Loading sverilog file '/home/pasam/common/Downloads/lab3-Chetanalahari-master/syn/rtl/adder_1b.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/dw_foundation.sldb'
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: The following synthetic libraries should be added to 
+        the list of link libraries: 
+        'dw_foundation.sldb'. (UISN-26)
+Compiling source file /home/pasam/common/Downloads/lab3-Chetanalahari-master/syn/rtl/adder_1b.sv
+Presto compilation completed successfully.
+Current design is now '/home/pasam/common/Downloads/lab3-Chetanalahari-master/syn/rtl/adder_1b.db:adder_1b'
+Loaded 2 designs.
+Current design is 'adder_1b'.
+dc_shell> 
+Current design is 'adder_1b'.
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/generic.sdb'
+dc_shell> exit
+
+Memory usage for this session 112 Mbytes.
+Memory usage for this session including child processes 112 Mbytes.
+CPU usage for this session 12 seconds ( 0.00 hours ).
+Elapsed time for this session 145 seconds ( 0.04 hours ).
+
+Thank you...
+
